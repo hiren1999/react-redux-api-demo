@@ -40,14 +40,6 @@ export const GetAllProductsRequest = () => async (dispatch, getState) => {
 		if (resposne.status === 200) {
 			dispatch(getAllProducts(resposne.data));
 		}
-		// axios
-		// 	.get('https://fakestoreapi.com/products')
-		// 	.then((response) => {
-		// 		dispatch(getAllProducts(response.data));
-		// 	})
-		// 	.catch((err) => {
-		// 		dispatch(errorGetAllProducts(err));
-		// 	});
 	} catch (err) {
 		dispatch(errorGetAllProducts(err));
 	}
