@@ -27,12 +27,11 @@ export const productSlice = createSlice({
 	},
 });
 
-export const { setStatus, getAllProducts, errorGetAllProducts } =
-	productSlice.actions;
+export const { setStatus, getAllProducts, errorGetAllProducts } = productSlice.actions;
 
 export default productSlice.reducer;
 
-export const GetAllProductsRequest = () => async (dispatch, getState) => {
+export const GetAllProductsRequest = () => async (dispatch) => {
 	dispatch(setStatus(STATUSES.LOADING));
 	try {
 		const resposne = await FetchAllProducts();
